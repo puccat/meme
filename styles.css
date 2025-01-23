@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #181818;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Verdana', sans-serif;
+}
+
+.hero {
+    background: linear-gradient(to right, #2f2f2f, #1c1c1c);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #333;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+.lrn-button {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #e05b53;
+    transform: scale(1.05);
+}
+.lrn-button:hover {
+    background-color: #e05b53;
+    transform: scale(1.05);
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about, .buy, .tele {
+    background-color: #2e2e2e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    border-radius: 10px;
+    padding: 40px;
+    color: #e0e0e0;
+}
+
+.about h2, .buy h2, .tele h2{
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+
+.about p, .buy p, .tele p{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+footer {
+    background: linear-gradient(135deg, #3a3a3a, #121212);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0px 5px 20px rgba(0, 0, 0, 0.6);
+    border-top: 2px solid #444;
+}
+
+footer .social-icon {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 2rem;
+    color: #e0e0e0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icon i {
+    transition: transform 0.3s ease;
+}
+
+footer .social-icon:hover i {
+    transform: rotate(20deg);
+}
+
+.social-icon:hover {
+    color: #1da1f2;
+}
+
+.social-icon.discord:hover {
+    color: #7289da; 
+}
+
+.social-icon.telegram:hover {
+    color: #0088cc; 
+}
+
+footer .copyright {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+}
+
+.buy {
+    background: linear-gradient(135deg, #2c2c2c, #181818);
+    padding: 80px 20px;
+    text-align: center;
+    color: #e0e0e0;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/white-diamond-silk.png');
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.buy h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.buy p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    z-index: 1;
+}
+
+.buy-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.buy-card {
+    background: #292929;
+    width: 320px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4), inset 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.buy-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.6), inset 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.buy-card:hover .card-icon img {
+    transform: scale(1.1);
+}
+
+.buy-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.buy-card p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #e05b53;
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+.lrn-button:hover {
+    background-color: #e05b53;
+    transform: scale(1.05);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .lrn-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .about, .buy {
+        padding: 30px;
+    }
+
+    .about h2, .buy h2 {
+        font-size: 1.8rem;
+    }
+
+    .about p, .buy p {
+        font-size: 1rem;
+    }
+
+    .buy-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buy-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    footer .social-icon {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        margin-bottom: 20px;
+    }
+
+    .social-icon {
+        margin: 10px;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .lrn-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .about h2, .buy h2 {
+        font-size: 1.6rem;
+    }
+
+    .about p, .buy p {
+        font-size: 0.9rem;
+    }
+
+    .buy-card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    footer .copyright {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+/* Tokenomics Section */
+.tokenomics {
+    background-color: #2e2e2e;
+    padding: 60px 20px;
+    text-align: center;
+    color: #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.tokenomics h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+}
+
+.tokenomics p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Token Distribution Section */
+.token-distribution {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.token-distribution h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    letter-spacing: 1.2px;
+    color: #fff;
+}
+
+.token-distribution ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.token-distribution li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Token Use Cases Section */
+.token-use-cases {
+    text-align: left;
+    max-width: 800px;
+    margin: 40px auto 0;
+    font-size: 1.2rem;
+}
+
+.token-use-cases h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    letter-spacing: 1.2px;
+    color: #fff;
+}
+
+.token-use-cases ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.token-use-cases li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    color: #ccc;
+}
+
+/* Tokenomics Chart Section */
+.token-chart {
+    margin-top: 30px;
+}
+
+.token-chart h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1.5px;
+    color: #fff;
+}
+
+.token-chart img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+
+
